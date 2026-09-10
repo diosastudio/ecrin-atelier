@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #FAF8F5;
+    color: #1C1817;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Custom luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5F1EB;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DDC5B5;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A9846E;
+  }
+}
+
+@layer utilities {
+  .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(234, 220, 210, 0.6);
+  }
+  
+  .glass-dark {
+    background: rgba(28, 24, 23, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #1C1817 0%,
+      #D4A392 50%,
+      #1C1817 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+  
+  .gold-shimmer {
+    background: linear-gradient(135deg, #ECC880 0%, #D4AF37 50%, #FAF0D7 100%);
+  }
+}
+
+/* Hide scrollbar for clean horizontal scrolls */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
